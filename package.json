@@ -1,15 +1,15 @@
 {
-  "name": "advent-of-code-bun",
+  "name": "advent-of-code-2023",
   "module": "scripts/main.ts",
   "type": "module",
   "scripts": {
     "solve": "bun --watch ./scripts/solve.ts"
   },
   "devDependencies": {
-    "bun-types": "latest",
+    "@biomejs/biome": "1.4.1",
+    "bun-types": "^1.0.14",
     "chalk": "^5.3.0",
-    "dedent": "^1.5.1",
-    "prettier": "^3.1.0"
+    "dedent": "^1.5.1"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

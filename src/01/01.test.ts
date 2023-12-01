@@ -1,5 +1,5 @@
-import { parse, partOne, partTwo } from '@/01/01';
 import { describe, expect, it } from 'bun:test';
+import { parse, partOne, partTwo } from '@/01/01';
 import example from '@/01/example.txt';
 import example2 from '@/01/example2.txt';
 
