@@ -17,13 +17,23 @@ export async function scaffold(day: number, year: number) {
   await mkdir(directory);
 
   const test = dedent`
-  import { describe } from 'bun:test'
+  import { describe, expect, it } from 'bun:test';
+  import { parse, partOne, partTwo } from '@/${name}/${name}';
+  import example from '@/${name}/example.txt';
 
-  describe(${`'Day ${day}'`}, () => {
-    describe('Part One', () => {})
+  describe('Day ${day}', () => {
+    describe('Part One', () => {
+      it('should solve the example', () => {
+        expect(partOne(parse(example))).toBe(undefined);
+      });
+    });
 
-    describe('Part Two', () => {})
-  })
+    describe('Part Two', () => {
+      it('should solve the example', () => {
+        expect(partTwo(parse(example))).toBe(undefined);
+      });
+    });
+  });
   `;
 
   const solution = dedent`
